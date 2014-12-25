@@ -1,0 +1,9 @@
+pkg_name=PyPgSQL
+pkg_version=2.4
+pkg_description=PyPgSQL interface module for PostgreSQL, v2.4
+
+# This release depends on Python 2.3 binary install
+test_file_exists=%PYTHONHOME%/python23.dll
+
+# Don't want to try and overwrite an existing installation
+test_file_not_exists=%PYTHONHOME%/Lib/site-packages/pyPgSQL/__init__.py

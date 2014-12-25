@@ -1,0 +1,56 @@
+This is a binary installation package for the PyPgSQL extension module 
+for Python, version 2.4, built for the OS/2+EMX port of Python 2.3.4.
+This is a re-release, to pick up a later version of the PostgreSQL 
+libpq client library.
+
+PyPgSQL is an interface to the PostgreSQL RDBMS package, and includes 
+a Python DB-API 2.0 compatible wrapper module.
+
+This package can be used to connect to Vincenzo Venuto's OS/2 EMX port 
+of the PostgreSQL RDBMS, from http://www.ecomstation.it/postgres/.
+PostgreSQL doesn't need to be either running or installed on the machine
+which uses this module, as this module is statically linked against
+PostgreSQL's libpq interface library.
+
+Please refer to the README.PyPgSQL file for more information about the 
+PyPgSQL module.
+
+The source archive (PyPgSQL-2.4.tar.gz) this package is based on 
+was found at http://pypgsql.sourceforge.net/.
+
+This package is a re-release, with the following changes from the
+previous release:
+- staticly linked against the PostgreSQL v7.4.5 libpq client library;
+- the libpq build now supports local (OS/2) sockets, so the requirement
+  to always specify a host named 'localhost' for local server
+  connections has been removed;
+- the libpq build now supports SSL connections.
+
+This module was built with no changes to the PyPgSQL source code, and 
+the only modification to the Distutils setup.py script was to add 
+information about library names and locations.  The underlying libpq 
+library was built with no source changes and an EMX multithread 
+specific Makefile.
+
+You need the Python 2.3.4 port installed before you can install 
+this package - you should be able to get it where you obtained this 
+archive.  PyPgSQL depends on the eGenix mxBase package, for which a 
+binary installation which should also be obtainable from the same 
+source.
+
+To install (assuming a working Python installation), change to the 
+directory containing the install script (install.cmd), and execute the 
+script.
+
+Please let me know if you encounter any problems with the installation 
+package.  Bug reports about PyPgSQL should be directed as specified on 
+the PyPgSQL home page.
+
+This software is provided 'as-is', without any express or implied warranty.
+In no event will the packager be held liable for any damages arising from 
+the use of the software.
+
+Andrew MacIntyre
+andymac@bullseye.apana.org.au
+http://www.andymac.org/
+September 20, 2004.
